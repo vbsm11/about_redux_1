@@ -11,8 +11,8 @@ import {
 
 import {useDispatch, useSelector} from 'react-redux';
 import {AppRootStateType} from './state/store';
-import {todolistsSelector} from './selectors/todolistsSelector';
-import {tasksSelector} from './selectors/tasksSelector';
+import {tasksSelector, todolistsSelector} from './selectors';
+
 
 export type FilterValuesType = "all" | "active" | "completed";
 export type TodolistType = {
