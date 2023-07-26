@@ -6,7 +6,7 @@ declare global {
     interface Window {
         __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
     }
-}
+} // плагин для просмотра redux в консоли браузера
 
 // объединяя reducer-ы с помощью combineReducers,
 // мы задаём структуру нашего единственного объекта-состояния
@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
     todolists: todolistsReducer
 })
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // плагин для просмотра redux в консоли браузера
 // непосредственно создаём store
 export const store = createStore(rootReducer, composeEnhancers());
 // определить автоматически тип всего объекта состояния
