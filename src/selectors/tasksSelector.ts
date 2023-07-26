@@ -1,3 +1,4 @@
 import {AppRootStateType} from '../state/store';
+import {TasksStateType} from '../App';
 
-export const tasksSelector = (state: AppRootStateType) => state.tasks
+export const tasksSelector = (state: AppRootStateType): TasksStateType => state.tasks

@@ -11,6 +11,8 @@ import {
 
 import {useDispatch, useSelector} from 'react-redux';
 import {AppRootStateType} from './state/store';
+import {todolistsSelector} from './selectors/todolistsSelector';
+import {tasksSelector} from './selectors/tasksSelector';
 
 export type FilterValuesType = "all" | "active" | "completed";
 export type TodolistType = {
@@ -26,8 +28,8 @@ export type TasksStateType = {
 
 function App() {
 
-    const todolists = useSelector<AppRootStateType, Array<TodolistType>>(state => state.todolists)
-    const tasks = useSelector<AppRootStateType, TasksStateType>(state => state.tasks)
+    const todolists = useSelector(todolistsSelector)
+    const tasks = useSelector(tasksSelector)
 
     const dispatch = useDispatch();
 
